@@ -382,16 +382,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian sistem persamaan linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gaus">eleminasi gaus</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -407,10 +403,8 @@ document.write(`
 <section id="operasi-baris-elementer">
 <h2>operasi baris elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
 <p>Operasi Baris Elementer(0BE) adalah serangkaian manipulasi aljabar yang dilakukan pada baris matriks dengan tujuan menyelesaikan sistem persamaan linear, mencari invers matriks, atau menentukan determinan.</p>
-</section>
-</section>
 <section id="jenis-jenis-operasi-baris-elementer">
-<h1>jenis jenis operasi baris elementer<a class="headerlink" href="#jenis-jenis-operasi-baris-elementer" title="Link to this heading">#</a></h1>
+<h3>jenis jenis operasi baris elementer<a class="headerlink" href="#jenis-jenis-operasi-baris-elementer" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Pertukaran Baris (Swapping Rows)
 Menukar posisi dua baris dalam matriks. Operasi ini dinotasikan sebagai <em>Ri↔Rj</em> yang berarti baris ke-i ditukar dengan baris ke-j</p></li>
@@ -419,6 +413,8 @@ Mengalikan semua elemen dalam satu baris dengan suatu bilangan bukan nol.Operasi
 <li><p>Penjumlahan satu baris dengan konstanta non-Nol dengan baris yang lain.Menambahkan atau mengurangi kelipatan suatu baris ke baris lain. Operasi ini dinotasikan sebagai
 Ri→Ri+kRj,berarti baris kedua dikurangi 3 kali baris pertama.</p></li>
 </ol>
+</section>
+</section>
 <section id="eleminasi-gaus">
 <h2>eleminasi gaus<a class="headerlink" href="#eleminasi-gaus" title="Link to this heading">#</a></h2>
 <p>Eliminasi Gauss adalah metode sistematis untuk menyelesaikan sistem persamaan linear dengan menggunakan operasi baris elementer. Eliminasi Gauss digunakan untuk menyelesaikan sistem persamaan linear dengan mengubah matriks koefisien menjadi bentuk yang lebih sederhana. Berikut langkah-langkahnya:</p>
@@ -436,15 +432,16 @@ Ri→Ri+kRj,berarti baris kedua dikurangi 3 kali baris pertama.</p></li>
 <li><p>Substitusi Balik: Setelah mencapai bentuk eselon baris, nilai dari variabel dapat ditemukan melalui substitusi balik, dimulai dari variabel terakhir hingga variabel pertama.</p></li>
 </ol>
 <p>Contoh Soal 1
-Selesaikan dengan menggunakan eliminasi gaus
-$<span class="math notranslate nohighlight">\(
+Selesaikan dengan menggunakan eliminasi gaus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_1 + 2x_2 + 3x_3 =6\\
 2x_1+ 4x_2 + 6x_3 =12\\
 x_3+x_2 = 2\\
 \end{array}
-\)</span>$
-Penyelesaiannya:</p>
+\end{split}\]</div>
+<p>Penyelesaiannya:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -468,60 +465,61 @@ Penyelesaiannya:</p>
 \begin{bmatrix}
 1 &amp; 2 &amp; 3 &amp; | &amp;6\\
 0 &amp; 1 &amp; 1 &amp; | &amp;2\\
-0 &amp; 0 &amp; 0 &amp; | &amp;0\\
-\end{bmatrix}
-\quad
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1 &amp; 0 &amp; 1 &amp; | &amp;2\\
-0 &amp; 1 &amp; 1 &amp; | &amp;2\\
-0 &amp; 0 &amp; 0 &amp; | &amp;0\\
 \end{bmatrix}
 \quad
 \end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{cc}
-x_1+x_3&amp;=2\\
-x_2+x_3&amp;=2\\
+x_2+x_3 = 2\\
+x_2 = 2 - x_3\\
 \end{array}
 \end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{array}{cc}
-x_1&amp;=2-1&amp;=1\\
-x_2&amp;=2-1&amp;=1\\
-x_3&amp;=1\\
+x_1+2x_2+3x_3 = 6\\
+x_2 = 2 - x_3 \\
 \end{array}
 \end{split}\]</div>
-<ul class="simple">
-<li><p>Jadi hasil akhirnya adalah:
-$<span class="math notranslate nohighlight">\(
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
-x_1&amp;=1\\
-x_2&amp;=1\\
-x_3&amp;=1\\
+x_1 + 2(2-x_3)+3x_3 = 6\\
+x_1 + 4-2x_3+3x_3 = 6\\
+x_1+4+x_3\\
+x_1=2-x_3
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-Contoh soal 2
-Selesaikan dengan menggunakan eliminasi gaus 
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1 = 2-x_3\\
+x_2=2-x_3\\
+x_3=x_3
+\end{array}
+\end{split}\]</div>
+<p>cuma ada satu variabel maka sistem memiliki tak hingga banyak solusi.</p>
+<p>Contoh soal 2
+Selesaikan dengan menggunakan eliminasi gaus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_1 + x_2 + x_3 =3\\
-      2x_1+x_3 = 5\\
-      x_1+2x_2   = 3\\
+        2x_1+x_3 = 5\\
+        x_1+2x_2   = 3\\
 \end{array}
-Penyelesaiannya:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Penyelesaiannya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; 1 &amp; 1 &amp; | &amp;3\\
 2 &amp; 0 &amp; 2 &amp; | &amp;5\\
 1 &amp; 2 &amp; 0 &amp; | &amp;3\\
 \end{bmatrix}
 \quad
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -540,55 +538,61 @@ Penyelesaiannya:
 \end{bmatrix}
 \quad
 \end{split}\]</div>
-<p>Substitusi balik dari baris ketiga:
-$<span class="math notranslate nohighlight">\(
+<p>Substitusi balik dari baris ketiga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 -x_3&amp;=-1/2\\
 x_3&amp;=1/2\
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-Substitusi balik dari baris kedua:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Substitusi balik dari baris kedua:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 -2x_2&amp;=-1\\
 x_2&amp;=1/2\
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-Substitusi balik dari baris pertama:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Substitusi balik dari baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_1 + x_2 + x-3&amp; =-1\\
 x_1 + 1/2 + 1/2&amp; =3\\
 x_1 + 1&amp; = 3\\
 x_1&amp; = 2
 \end{array}
-\)</span>$</p>
+\end{split}\]</div>
 <ul class="simple">
-<li><p>Jadi hasil akhirnya adalah:
-$<span class="math notranslate nohighlight">\(
+<li><p>Jadi hasil akhirnya adalah:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_1&amp; = 2\\
 x_2&amp; = 1/2\\
 x_3&amp; = 1/2
 \end{array}
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 <p>Contoh Soal 3
-Selesaikan dengan menggunakan eliminasi gaus
-$<span class="math notranslate nohighlight">\(
+Selesaikan dengan menggunakan eliminasi gaus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
         2x_1+2x_2 = 4\\
         x_1+x_2   = 2\\
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-Penyelesaiannya:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Penyelesaiannya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 2 &amp; 2 &amp;  | &amp;4\\
 1 &amp; 1 &amp; | &amp;2\\
 \end{bmatrix}
 \quad
-\)</span>$</p>
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -605,46 +609,51 @@ Penyelesaiannya:
 \end{bmatrix}
 \quad
 \end{split}\]</div>
-<p>Substitusi balik dari baris pertama:
-$<span class="math notranslate nohighlight">\(
+<p>Substitusi balik dari baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_1 + x_2&amp;=2\\
 x_1&amp;= 2-x_2\\
 x_2&amp;= x_2
 \end{array}
-\)</span>$</p>
+\end{split}\]</div>
 <ul class="simple">
-<li><p>Jadi hasil akhirnya adalah:
-$<span class="math notranslate nohighlight">\(
+<li><p>Jadi hasil akhirnya adalah:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 (x_1, x_2)=(2-x_2,x_2)\\
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 jika (x_2 =0) maka ((x_1,x_2)= (2,0)) \\
 jika (x_2 =1) maka ((x_1,x_2)= (1,1))\\
 jika (x_2 =2) maka ((x_1,x_2)= (0,2))\\
 \end{array}
-\)</span>$
-sehingga sistem ini memiliki tak hingga banyak solusi</p></li>
-</ul>
+\end{split}\]</div>
+<p>sehingga sistem ini memiliki tak hingga banyak solusi</p>
 <p>Contoh Soal 4
-Selesaikan dengan menggunakan eliminasi gaus
-$<span class="math notranslate nohighlight">\(
+Selesaikan dengan menggunakan eliminasi gaus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
         x_1+x_2 = 5\\
         x_1+2x_3  = 6\\
 \end{array}
-\)</span><span class="math notranslate nohighlight">\(
-Penyelesaian:
-\)</span><span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Penyelesaian:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 1 &amp; 1 &amp;| &amp;5\\
 0 &amp; 2 &amp;| &amp;6\\
 \end{bmatrix}
 \quad
-\)</span>$</p>
+\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix}
@@ -653,24 +662,26 @@ Penyelesaian:
 \end{bmatrix}
 \quad
 \end{split}\]</div>
-<p>Substritusi balik dari baris kedua:
-$<span class="math notranslate nohighlight">\(
+<p>Substritusi balik dari baris kedua:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 x_2=1\\
 x_1+1=5\\
 x_1=4
 \end{array}
-\)</span>$</p>
+\end{split}\]</div>
 <ul class="simple">
 <li><p>Jadi hasil akhirnya adalah:
-sistem ini memiliki solusi tunggal yaitu:
-$<span class="math notranslate nohighlight">\(
+sistem ini memiliki solusi tunggal yaitu:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{array}{cc}
 (x_1=4)\\
 (x_2=1)
 \end{array}
-\)</span>$</p></li>
-</ul>
+\end{split}\]</div>
 </section>
 </section>
 
@@ -720,16 +731,12 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian sistem persamaan linear</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gaus">eleminasi gaus</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
