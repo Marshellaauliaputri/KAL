@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Komputasi Aljabar Linear &#8212; KAL</title>
+    <title>Penyelesaian sistem persamaan linear &#8212; KAL</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Penyelesaian SP';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SYSTEM PERSAMAAN LINEAR" href="SISTEM%20PERSAMAAN%20LINEAR.html" />
+    <link rel="prev" title="SYSTEM PERSAMAAN LINEAR" href="SISTEM%20PERSAMAAN%20LINEAR.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,19 +174,19 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Komputasi Aljabar Linear
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="SISTEM%20PERSAMAAN%20LINEAR.html">SYSTEM PERSAMAAN LINEAR</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="Penyelesaian%20SP.html">Penyelesaian sistem persamaan linear</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian sistem persamaan linear</a></li>
 </ul>
 
     </div>
@@ -260,7 +258,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPenyelesaian SP.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +288,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Penyelesaian SP.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -361,7 +359,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -372,11 +372,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Komputasi Aljabar Linear</h1>
+    <h1>Penyelesaian sistem persamaan linear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gaus">eleminasi gaus</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -386,10 +398,272 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="komputasi-aljabar-linear">
-<h1>Komputasi Aljabar Linear<a class="headerlink" href="#komputasi-aljabar-linear" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section id="penyelesaian-sistem-persamaan-linear">
+<h1>Penyelesaian sistem persamaan linear<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<section id="operasi-baris-elementer">
+<h2>operasi baris elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
+<p>Operasi Baris Elementer(0BE) adalah serangkaian manipulasi aljabar yang dilakukan pada baris matriks dengan tujuan menyelesaikan sistem persamaan linear, mencari invers matriks, atau menentukan determinan.</p>
+<section id="jenis-jenis-operasi-baris-elementer">
+<h3>jenis jenis operasi baris elementer<a class="headerlink" href="#jenis-jenis-operasi-baris-elementer" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Pertukaran Baris (Swapping Rows)
+Menukar posisi dua baris dalam matriks. Operasi ini dinotasikan sebagai <em>Ri↔Rj</em> yang berarti baris ke-i ditukar dengan baris ke-j</p></li>
+<li><p>Perkalian Baris dengan Konstanta Tak Nol
+Mengalikan semua elemen dalam satu baris dengan suatu bilangan bukan nol.Operasi ini dinotasikan sebagai Ri→kRi dimana k≠0 berarti semua elemen di baris kedua dikalikan dengan 2.</p></li>
+<li><p>Penjumlahan satu baris dengan konstanta non-Nol dengan baris yang lain.Menambahkan atau mengurangi kelipatan suatu baris ke baris lain. Operasi ini dinotasikan sebagai
+Ri→Ri+kRj,berarti baris kedua dikurangi 3 kali baris pertama.</p></li>
+</ol>
+</section>
+</section>
+<section id="eleminasi-gaus">
+<h2>eleminasi gaus<a class="headerlink" href="#eleminasi-gaus" title="Link to this heading">#</a></h2>
+<p>Eliminasi Gauss adalah metode sistematis untuk menyelesaikan sistem persamaan linear dengan menggunakan operasi baris elementer. Eliminasi Gauss digunakan untuk menyelesaikan sistem persamaan linear dengan mengubah matriks koefisien menjadi bentuk yang lebih sederhana. Berikut langkah-langkahnya:</p>
+<ol class="arabic simple">
+<li><p>Matriks Augmented: Pertama, sistem persamaan linear dituliskan dalam bentuk matriks teraugmentasi, yang menggabungkan koefisien variabel dengan hasil persamaan.</p></li>
+<li><p>Operasi Baris Elementer: Tiga jenis operasi baris elementer diterapkan:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Pertukaran Baris: Menukar posisi dua baris.</p></li>
+<li><p>Penskalaan Baris: Mengalikan semua elemen dalam suatu baris dengan bilangan konstan tak nol.</p></li>
+<li><p>Penggantian Baris: Menjumlahkan kelipatan satu baris ke baris lainnya.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Bentuk Eselon Baris: Tujuan dari eliminasi adalah untuk mengubah matriks menjadi bentuk eselon baris, di mana setiap baris memiliki lebih banyak nol di sebelah kiri dibandingkan dengan baris di atasnya.</p></li>
+<li><p>Substitusi Balik: Setelah mencapai bentuk eselon baris, nilai dari variabel dapat ditemukan melalui substitusi balik, dimulai dari variabel terakhir hingga variabel pertama.</p></li>
+</ol>
+<p>Contoh Soal 1
+Selesaikan dengan menggunakan eliminasi gaus
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1 + 2x_2 + 3x_3 =6\\
+2x_1+ 4x_2 + 6x_3 =12\\
+x_3+x_2 = 2\\
+\end{array}
+\)</span>$
+Penyelesaiannya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp;6\\
+2 &amp; 4 &amp; 6 &amp; | &amp;12\\
+0 &amp; 1 &amp; 1 &amp; | &amp;2\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp;6\\
+0 &amp; 0 &amp; 0 &amp; | &amp;0\\
+0 &amp; 1 &amp; 1 &amp; | &amp;2\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp;6\\
+0 &amp; 1 &amp; 1 &amp; | &amp;2\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_2+x_3 = 2\\
+x_2 = 2 - x_3\\
+\end{array}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+2x_2+3x_3 = 6\\
+x_2 = 2 - x_3 \\
+\end{array}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1 + 2(2-x_3)+3x_3 = 6\\
+x_1 + 4-2x_3+3x_3 = 6\\
+x_1+4+x_3\\
+x_1=2-x_3
+\end{array}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1 = 2-x_3\\
+x_2=2-x_3\\
+x_3=x_3
+\end{array}
+\end{split}\]</div>
+<p>Contoh soal 2
+Selesaikan dengan menggunakan eliminasi gaus
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1 + x_2 + x_3 =3\\
+        2x_1+x_3 = 5\\
+        x_1+2x_2   = 3\\
+\end{array}
+\)</span>$</p>
+<p>Penyelesaiannya:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | &amp;3\\
+2 &amp; 0 &amp; 2 &amp; | &amp;5\\
+1 &amp; 2 &amp; 0 &amp; | &amp;3\\
+\end{bmatrix}
+\quad
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | &amp;3\\
+0 &amp; -2 &amp; 0 &amp; | &amp;-1\\
+0 &amp; 1 &amp; -1 &amp; | &amp;0\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | &amp;3\\
+0 &amp; -2 &amp; 0 &amp; | &amp;-1\\
+0 &amp; 0 &amp; -1 &amp; | &amp;-1/2\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<p>Substitusi balik dari baris ketiga:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+-x_3&amp;=-1/2\\
+x_3&amp;=1/2\
+\end{array}
+\)</span><span class="math notranslate nohighlight">\(
+Substitusi balik dari baris kedua:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+-2x_2&amp;=-1\\
+x_2&amp;=1/2\
+\end{array}
+\)</span><span class="math notranslate nohighlight">\(
+Substitusi balik dari baris pertama:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1 + x_2 + x-3&amp; =-1\\
+x_1 + 1/2 + 1/2&amp; =3\\
+x_1 + 1&amp; = 3\\
+x_1&amp; = 2
+\end{array}
+\)</span>$</p>
+<ul class="simple">
+<li><p>Jadi hasil akhirnya adalah:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1&amp; = 2\\
+x_2&amp; = 1/2\\
+x_3&amp; = 1/2
+\end{array}
+\)</span>$</p></li>
+</ul>
+<p>Contoh Soal 3
+Selesaikan dengan menggunakan eliminasi gaus
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+        2x_1+2x_2 = 4\\
+        x_1+x_2   = 2\\
+\end{array}
+\)</span><span class="math notranslate nohighlight">\(
+Penyelesaiannya:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+2 &amp; 2 &amp;  | &amp;4\\
+1 &amp; 1 &amp; | &amp;2\\
+\end{bmatrix}
+\quad
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp;  | &amp;2\\
+1 &amp; 1 &amp; | &amp;2\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp;  | &amp;2\\
+0 &amp; 0 &amp; | &amp;0\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<p>Substitusi balik dari baris pertama:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1 + x_2&amp;=2\\
+x_1&amp;= 2-x_2\\
+x_2&amp;= x_2
+\end{array}
+\)</span>$</p>
+<ul class="simple">
+<li><p>Jadi hasil akhirnya adalah:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+(x_1, x_2)=(2-x_2,x_2)\\
+\end{array}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+jika (x_2 =0) maka ((x_1,x_2)= (2,0)) \\
+jika (x_2 =1) maka ((x_1,x_2)= (1,1))\\
+jika (x_2 =2) maka ((x_1,x_2)= (0,2))\\
+\end{array}
+\)</span>$</p></li>
+</ul>
+<p>Contoh Soal 4
+Selesaikan dengan menggunakan eliminasi gaus
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+        x_1+x_2 = 5\\
+        x_1+2x_3  = 6\\
+\end{array}
+\)</span><span class="math notranslate nohighlight">\(
+Penyelesaian:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+1 &amp; 1 &amp;| &amp;5\\
+0 &amp; 2 &amp;| &amp;6\\
+\end{bmatrix}
+\quad
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp;| &amp;5\\
+0 &amp; 1 &amp;| &amp;1\\
+\end{bmatrix}
+\quad
+\end{split}\]</div>
+<p>Substritusi balik dari baris kedua:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_2=1\\
+x_1+1=5\\
+x_1=4
+\end{array}
+\)</span>$</p>
+<ul class="simple">
+<li><p>Jadi hasil akhirnya adalah:
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+(x_1=4)\\
+(x_2=1)
+\end{array}
+\)</span>$</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -422,14 +696,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="SISTEM%20PERSAMAAN%20LINEAR.html"
-       title="next page">
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">SYSTEM PERSAMAAN LINEAR</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -437,6 +711,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">operasi baris elementer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-operasi-baris-elementer">jenis jenis operasi baris elementer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eleminasi-gaus">eleminasi gaus</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
